@@ -17,3 +17,24 @@ To send a message to Kafka using the producer application:
 
    ```shell
    curl -X POST "http://localhost:8080/send?message=YourMessageHere"
+Replace YourMessageHere with the message you want to send to Kafka.
+
+## Consumer Application
+The consumer application uses a Kafka listener (@KafkaListener) to consume messages from the Kafka topic. When a message is received, it logs the message content.
+
+## Usage
+To consume messages from Kafka using the consumer application:
+
+Start the consumer application by running ConsumerApplication.java.
+
+Messages sent to the Kafka topic by the producer application will be received and logged by the consumer.
+
+## Prerequisites
+Java Development Kit (JDK) installed on your system.
+Apache Kafka installed and running locally or on a reachable server.
+Configuration
+Ensure that the Kafka broker address is correctly configured in both producer and consumer applications. You can configure Kafka-related properties in the application.properties or application.yml files.
+
+## Dependencies
+Spring Boot
+Spring Kafka
